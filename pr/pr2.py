@@ -73,3 +73,178 @@ sorted_list = lambda x: (sorted(i) for i in x)
 second_largest = lambda x, func: [y[len(y)-2] for y in func(x)]
 result = second_largest(current_list, sorted_list)
 print(result)
+
+
+#Отсортируйте словарь по значению в порядке возрастания и убывания.
+import operator
+d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+#Сортируем в порядке возрастания:
+
+result = dict(sorted(d.items(), key=operator.itemgetter(1)))
+
+#И в порядке убывания:
+
+result_2 = dict(sorted(d.items(), key=operator.itemgetter(1), reverse=True))
+
+
+#Напишите программу для слияния нескольких словарей в один.
+
+
+dict_a = {1:10, 2:20}
+dict_b = {3:30, 4:40}
+dict_c = {5:50, 6:60}
+
+#Объединить их можно вот так:
+
+result_3 = {}
+for d in (dict_a, dict_b, dict_c):
+    result_3.update(d)
+
+
+#Найдите три ключа с самыми высокими значениями в словаре
+my_dict = {'a':500, 'b':5874, 'c': 560,'d':400, 'e':5874, 'f': 20}
+
+result_4 = sorted(my_dict, key=my_dict.get, reverse=True)[:3]
+
+#Напишите код, который переводит целое число в строку, при том что его можно применить в любой системе счисления.
+#Второй аргумент функции int отвечает за указание основания системы счисления:
+
+print(int('ABC', 16))
+
+#Нужно вывести первые n строк треугольника Паскаля.
+# В этом треугольнике на вершине и по бокам стоят единицы, а каждое число внутри равно сумме двух расположенных над ним чисел.
+
+
+def pascal_triangle(n):
+    row = [1]
+    y = [0]
+    for x in range(max(n, 0)):
+        print(row)
+        row = [left + right for left, right in zip(row + y, y + row)]
+
+
+pascal_triangle(3)
+
+
+#Сделайте так, чтобы число секунд отображалось в виде дни:часы:минуты:секунды.
+
+def convert(seconds):
+    days = seconds // (24 * 3600)
+    seconds %= 24 * 3600
+    hours = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+    print(f'{days}:{hours}:{minutes}:{seconds}')
+
+convert(1459872)
+
+
+#Вы принимаете от пользователя последовательность чисел, разделённых запятой. Составьте список и кортеж с этими числами.
+
+# values = input('Введите числа через запятую: ')
+# ints_as_strings = values.split(',')
+# ints = map(int, ints_as_strings)
+# lst = list(ints)
+# tup = tuple(lst)
+# print('Список:', lst)
+# print('Кортеж:', tup)
+
+
+#Выведите первый и последний элемент списка.
+
+lst = [1, 2, 3, 4, 5]
+print(f'Первый: {lst[0]}; последний: {lst[-1]}')
+
+#Напишите программу, которая выводит чётные числа из заданного списка и останавливается, если встречает число 237.
+
+numbers = [
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+]
+
+for x in numbers:
+    if x == 237:
+        break
+    elif x % 2 == 0:
+        print(x)
+
+#Напишите программу, которая принимает два списка и выводит все элементы первого, которых нет во втором.
+
+set_1 = set(['White', 'Black', 'Red'])
+set_2 = set(['Red', 'Green'])
+
+print(set_1 - set_2)
+
+#Сложите цифры целого числа.
+
+def sum_digits(num):
+    digits = [int(d) for d in str(num)]
+    return sum(digits)
+
+print(sum_digits(5245))
+
+#Посчитайте, сколько раз символ встречается в строке.
+
+string = 'Python Software Foundation'
+count_o = string.count('o')
+print(count_o)
+
+#Поменяйте значения переменных местами.
+x = 5
+y = 10
+x, y = y, x
+
+#С помощью анонимной функции извлеките из списка числа, делимые на 15.
+
+nums = [45, 55, 60, 37, 100, 105, 220]
+result = list(filter(lambda x: not x % 15, nums))
+print(result)
+
+
+#Напишите программу, которая принимает текст и выводит два слова: наиболее часто встречающееся и самое длинное.
+import collections
+
+text = 'lorem ipsum dolor sit amet amet amet'
+words = text.split()
+counter = collections.Counter(words)
+most_common, occurrences = counter.most_common()[0]
+
+longest = max(words, key=len)
+
+print(most_common, longest)
+
+
+# Вывод: без кавычеу sep разделитель строк, в середине можно указать символ который будет между строк
+print ("I like Python", sep=" ")
+
+
+#Напишите программу, которая считывает три целых числа и выводит на экран их сумму. Каждое число записано в отдельной строке.\
+a = 3
+a += 4
+a += 5
+print(a)
+
+
+#Напишите программу, которая считывает целое число,
+# после чего на экран выводится следующее и предыдущее целое число с пояснительным текстом.
+
+a = int(input())
+print('Следующее за числом', a, 'число:', a+1)
+print('Для числа', a, 'предыдущее число:', a-1)
+
+
+#Напишите программу, которая считывает целое положительное число xx и выводит на экран последовательность чисел x, 2x, 3x, 4x, 5x,
+# разделённых тремя черточками.
+
+a = int(input())
+print(a, a*2, a*3, a*4, a*5, sep='-'*3)
+
+
+
+
+
+
+
+
