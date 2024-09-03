@@ -283,47 +283,60 @@
 # b = 'aaaabbbb cc'
 # print(b.count('a'))
 
-# в строку вставить данные
-def test():
-    name = 'A'
-    age = 25
-    print(f"my name is {name}' and 'im' {age}")
+# # в строку вставить данные
+# def test():
+#     name = 'A'
+#     age = 25
+#     print(f"my name is {name}' and 'im' {age}")
+#
+#
+# def test_split():
+#     my_string = 'hi Lili'
+#     my_list = my_string.split(' ')
+#     print(my_list)
+#
+#
+# def test_from_list_to_string():
+#     my_list = ["hi, Lili"]
+#     new_string = ' '.join(my_list)
+#     print(new_string)
+#
+#
+# def test_calc():
+#     # for c in range(1, 10):
+#     #     for j in range(1, 10):
+#     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#     for number_1 in numbers:
+#         for number_2 in numbers:
+#             print(number_1, '*', number_2, '=', number_1 * number_2)
+#
+#
+# def test_multiplication_table_list():
+#     table = []
+#     for i in range(1, 11):
+#         row = []
+#         for j in range(1, 11):
+#             row.append(i * j)
+#         table.append(row)
+#
+#     for row in table:
+#         print(row)
 
 
-def test_split():
-    my_string = 'hi Lili'
-    my_list = my_string.split(' ')
-    print(my_list)
+def is_our_universe():
+    # Произведение двоек
+    product_of_twos = 2 * 2  # 2 * 2 = 4
+
+    # Проверка условия
+    if product_of_twos != 4:
+        return False
+    else:
+        return True
 
 
-def test_from_list_to_string():
-    my_list = ["hi, Lili"]
-    new_string = ' '.join(my_list)
-    print(new_string)
-
-
-def test_calc():
-    # for c in range(1, 10):
-    #     for j in range(1, 10):
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    for number_1 in numbers:
-        for number_2 in numbers:
-            print(number_1, '*', number_2, '=', number_1 * number_2)
-
-
-def test_multiplication_table_list():
-    table = []
-    for i in range(1, 11):
-        row = []
-        for j in range(1, 11):
-            row.append(i * j)
-        table.append(row)
-
-    for row in table:
-        print(row)
-
-
-
+# Пример использования функции
+result = is_our_universe()
+print(result)  # Вывод: True
 
 
 
