@@ -1,4 +1,3 @@
-# # Есть список a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89].
 # # Выведите все элементы, которые меньше 5.
 # a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 # for elem in a:
@@ -136,7 +135,7 @@
 #     seconds %= 3600
 #     minutes = seconds // 60
 #     seconds %= 60
-#     print(f'{days}:{hours}:{minutes}:{seconds}')
+#     print(f'f'{days}:{hours}:{minutes}:{seconds}')
 #
 # convert(1459872)
 #
@@ -302,13 +301,13 @@
 #     print(new_string)
 #
 #
-# def test_calc():
-#     # for c in range(1, 10):
-#     #     for j in range(1, 10):
-#     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-#     for number_1 in numbers:
-#         for number_2 in numbers:
-#             print(number_1, '*', number_2, '=', number_1 * number_2)
+def test_calc():
+    # for c in range(1, 10):
+    #     for j in range(1, 10):
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for number_1 in numbers:
+        for number_2 in numbers:
+            print(number_1, '*', number_2, '=', number_1 * number_2)
 #
 #
 # def test_multiplication_table_list():
@@ -323,20 +322,24 @@
 #         print(row)
 
 
-def is_our_universe():
-    # Произведение двоек
-    product_of_twos = 2 * 2  # 2 * 2 = 4
+# def is_our_universe():
+#     # Произведение двоек
+#     product_of_twos = 2 * 2  # 2 * 2 = 4
+#
+#     # Проверка условия
+#     if product_of_twos != 4:
+#         return False
+#     else:
+#         return True
+#
+#
+# # Пример использования функции
+# result = is_our_universe()
+# print(result)  # Вывод: True
 
-    # Проверка условия
-    if product_of_twos != 4:
-        return False
-    else:
-        return True
 
 
-# Пример использования функции
-result = is_our_universe()
-print(result)  # Вывод: True
+
 
 
 
